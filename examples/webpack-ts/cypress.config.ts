@@ -49,6 +49,7 @@ async function setupNodeEvents(
 export default defineConfig({
   e2e: {
     baseUrl: "https://duckduckgo.com",
+    reporter: require.resolve("@badeball/cypress-cucumber-preprocessor/pretty-reporter"),
     specPattern: "**/*.feature",
     setupNodeEvents,
   },
